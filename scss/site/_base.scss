@@ -62,10 +62,10 @@ img.alignright {
 
 // A more subtle background color for the active menu item
 .top-bar-section li.active:not(.has-form) a:not(.button)  {
-	background: #272727;
+	background: white;
 }
 .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
-	background: #202020;
+	background: white;
 }
 
 // Add some whitespace above the footer for medium-up screens
@@ -94,4 +94,27 @@ img.alignright {
 		}
 
 		.download { margin-top: rem-calc(20); }
+	}
+	
+	// Edits
+	
+	@import url(http://weloveiconfonts.com/api/?family=brandico);
+	/* brandico */
+	[class*="brandico-"]:before {
+		font-family: 'brandico', sans-serif;
+		display: inline-block;
+		color: $primary-color;
+	}
+	
+	ul.title-area li{
+		display: inline-block;
+	}
+	
+	.title-area {
+		.uppercase {
+			text-transform: uppercase;
+		}
+		.top-bar-center{
+			margin-top:  10px;
+		}
 	}
