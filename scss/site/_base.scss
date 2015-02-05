@@ -3,7 +3,9 @@
  Basic styles for FoundationPress demo site
 
 */
-
+li {
+	list-style: none !important;
+}
 
 // Reset margin and padding on figure element
 figure { 
@@ -51,7 +53,7 @@ img.alignright {
 
 // Add some whitespace between top bar and content
 .top-bar-container, .tab-bar {
-	margin-bottom: rem-calc(32);
+	margin-bottom: rem-calc(0);
 }
 
 // Fix the issue where the WP adminbar overlaps the mobile menu
@@ -96,25 +98,178 @@ img.alignright {
 		.download { margin-top: rem-calc(20); }
 	}
 	
-	// Edits
+// Edits
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* brandico */
+[class*="entypo-"]:before {
+	font-family: 'entypo', sans-serif;
+	display: inline-block;
+	color: $primary-color;
 	
-	@import url(http://weloveiconfonts.com/api/?family=brandico);
-	/* brandico */
-	[class*="brandico-"]:before {
-		font-family: 'brandico', sans-serif;
-		display: inline-block;
-		color: $primary-color;
+}
+
+.active {
+	position: relative;
+}
+.active:before {
+	font-family: 'entypo', sans-serif;
+	display: inline-block;
+	color: $primary-color;
+	content: "\2715";
+	position: absolute;
+	bottom: 39.5%;
+	left: 4px;
+	font-size: 19px;
+	z-index: 100;
+	width: 100%;
+	
+}
+
+
+#menu-portfolio{
+		.active:before{
+			bottom: -0.5px;
+			left: -20px;
+			font-size: 14px;
+		}
 	}
-	
-	ul.title-area li{
-		display: inline-block;
+
+.social{
+	position: relative;
+	top: -15px;
+	margin-right: 10px;
 	}
-	
-	.title-area {
-		.uppercase {
+ul.title-area li{
+	display: inline-block;
+}
+
+.title-area {
+	.uppercase {
+		text-transform: uppercase;
+	}
+	.top-bar-center{
+		margin-top:  10px;
+	}
+	.name h1 a {
+		padding-left: 2.125rem;
+	}
+}
+
+// SideNav Menu
+#menu-portfolio{
+	li {
+		
+		margin-bottom: 20px;
+		list-style: none;
+		a {
+			color: black;
 			text-transform: uppercase;
 		}
-		.top-bar-center{
-			margin-top:  10px;
+	}
+}
+
+
+//Portofolio
+article{
+	margin-bottom:2rem;
+}
+.entry-title,
+.taxonomy-title{
+	span {
+		color: $primary-color;
+		margin-right: 1rem;
+	}
+}
+.entry-content{
+position: relative;
+	.entry-video{	
+		
+	}
+}
+
+
+.entry-link{
+	$thumbnail-time:0.5s;
+	transition: all $thumbnail-time;
+	position: relative;
+	.entypo-search{
+	position: absolute;
+	font-size: 50px;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+	opacity: 0;
+	}
+	.entry-title{
+		transition: all $thumbnail-time;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		bottom: 0%;
+		opacity: 0;
+		z-index: 2;
+		transition: all $thumbnail-time;
+	}
+	.entry-thumbnail{
+	transition: all $thumbnail-time;
+	width: 100%;
+ 	}
+ 	&:hover {
+ 	transition: all $thumbnail-time;
+ 		.entry-title{
+ 			transition: all $thumbnail-time;
+ 			opacity: 1;
+ 		}
+ 		.entypo-search{
+ 			opacity: 1;
+ 		}
+ 		.entry-thumbnail{
+ 			transition: all $thumbnail-time;
+	 		opacity: 0.1;
+	 		width: 100%;
+	 	}
+
+ 	
+ 	}
+}
+
+#sidebar{
+	@media #{$small-only} {
+	margin: 20px 10%;
+	width: 80%;
+	 li {
+	 	padding: 10px 10px;
+		width: 100%;
+		text-align: center;	
+		margin-left: 0px;
+		a {
+			font-size: 12px;
+			font-weight: bold;
 		}
+	}
+	 .active{
+	 		background-color: $primary-color;
+	 		&:before{display: none;}
+	 		a {
+		 		color: white;
+	 		}
+		}
+	
+	}
+
+	@media #{$medium-only} {
+	 li {
+		display: inline-block;
+		margin-left: 50px;
+	}
+	}
+
+	@media #{$large-up} {
+	margin-top: 120px;
+	position: fixed;
+	
+	li{margin-left: 0px;}
+
+	}
 	}

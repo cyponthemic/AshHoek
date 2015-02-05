@@ -1,23 +1,49 @@
 <?php
 /*
-Template Name: Video single
+Template Name: Video 
 */
 get_header(); ?>
-<div class="row ">
-	<?php get_sidebar(); 
-		
-	?>
+<div class="row">
+	<?php get_sidebar(); ?> 
     <div class="small-12 large-9 columns" role="main">
 		
         <?php do_action('foundationPress_before_content'); ?>
+        <?php if(is_page('director')){
+        			$project_type=1;}
+			  elseif (is_page('cinematographer')){
+				  	$project_type=2;}
+			  else {
+				  	$project_type=3;
+			  }	
+			  
+         ?>
 			<article <?php post_class("small-12 columns") ?> id="post-<?php the_ID(); ?>">
+				
+				<?php $args = array( 
+										'post_type' => 'project',
+										'posts_per_page' => -1, 
+									
+										'meta_query' => array(
+														'relation' => 'AND',
+														array(
+															'key' => 'wpcf-featured-project',
+															'value' => '1',
+															'compare' => '='
+														),
+														array(
+															'key' => 'wpcf-project-type',
+															'value' => $project_type,
+															'compare' => '='
+														))
+									);
+				$loop = new WP_Query( $args );
 					
-					<?php while (have_posts()) : the_post(); ?>
+					while ( $loop->have_posts() ) : $loop->the_post();
 						
-						
+						?>
 						
 						 <header>
-							 <h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>
+							 
 						 </header>
 						
 						<div class="entry-content">
@@ -27,6 +53,7 @@ get_header(); ?>
 								echo types_render_field( "project-video-embed", array("width" => "100%","height" => "100%","portrait" => "0") );
 								?>
 							</div>
+							<h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>
 						</div>
 						
 						<hr>
@@ -42,7 +69,7 @@ get_header(); ?>
 										'posts_per_page' => -1, 
 										'meta_key'   => 'wpcf-project-type', 
 										/* 1 for director */
-										'meta_value' => '1'
+										'meta_value' => $project_type
 									);
 				$loop = new WP_Query( $args );
         

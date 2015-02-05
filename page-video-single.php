@@ -3,18 +3,24 @@
 Template Name: Video single
 */
 get_header(); ?>
-<div class="row ">
-	<?php get_sidebar(); 
-		
-	?>
+<div class="row">
+	<?php get_sidebar(); ?>
     <div class="small-12 large-9 columns" role="main">
 		
         <?php do_action('foundationPress_before_content'); ?>
 			<article <?php post_class("small-12 columns") ?> id="post-<?php the_ID(); ?>">
+				
+				<?php $args = array( 
+										'post_type' => 'project',
+										'posts_per_page' => -1, 
+										'meta_key'   => 'wpcf-featured-project', 
+										'meta_value' => '1'
+									);
+				$loop = new WP_Query( $args );
 					
-					<?php while (have_posts()) : the_post(); ?>
+					while ( $loop->have_posts() ) : $loop->the_post();
 						
-						
+						?>
 						
 						 <header>
 							 <h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>

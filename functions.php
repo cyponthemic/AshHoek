@@ -32,4 +32,8 @@ require_once('library/theme-support.php');
 // Add Header image
 require_once('library/custom-header.php');
 
+
+add_image_size( 'video-thumb', 220, 120, array( 'center', 'center' ) ); // (cropped)
+set_post_thumbnail_size( 220, 120, array( 'center', 'center' ) );
+
 ?>

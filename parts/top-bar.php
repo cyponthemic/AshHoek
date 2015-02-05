@@ -5,14 +5,28 @@
                 <h1 class="uppercase top-bar-center"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
             </li>
             
-			<li class="brandico-instagram-filled"></li>
-			<li class="brandico-vimeo-rect"></li>
-			<li class="brandico-tumblr-rect"></li>
+			<li >
+				<a  href="http://ashkoek-photography.tumblr.com/">
+					<span class="entypo-instagrem social" ></span>
+				</a>
+			</li>
+			<li >
+				<a  href="http://ashkoek-photography.tumblr.com/">
+					<span class="entypo-vimeo-circled social" ></span>
+				</a>
+			</li>
+			<li >
+				<a  href="http://ashkoek-photography.tumblr.com/">
+					<span class="entypo-tumblr-circled social" ></span>
+				</a>
+			</li>
+					
 			
         </ul>
         <section class="top-bar-section">
             <?php foundationPress_top_bar_l(); ?>
             <?php foundationPress_top_bar_r(); ?>
+            
         </section>
     </nav>
 </div>
