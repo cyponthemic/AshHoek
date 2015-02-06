@@ -108,10 +108,12 @@ img.alignright {
 	color: $primary-color;
 	
 }
-
+.current-page-ancestor,
 .active {
 	position: relative;
 }
+
+.top-bar-menu .current-page-ancestor:before,
 .active:before {
 	font-family: 'entypo', sans-serif;
 	display: inline-block;

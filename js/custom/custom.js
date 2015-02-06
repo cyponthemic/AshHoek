@@ -1,13 +1,13 @@
+/*
+
+Function to apply the active filter on the single pages.
+Not very AGILE.
+Need some rewritting
+
+*/
 jQuery(document).ready(function($) {
-if ( jQuery("aside[class~='Director']"=true)){
-	jQuery('#sidebar').addClass("Director");
-	}
-else if ( jQuery("aside[class~='Cinematographer']")){
-	jQuery('#sidebar').addClass("Cinematographer");
-	}
-else {
-	jQuery('#sidebar').addClass("Photographer");
-	}
+	jQuery("aside[class~='Director']").find( "li.menu-item-47" ).addClass("active");
+	jQuery("aside[class~='Cinematographer']").find( "li.menu-item-46" ).addClass("active");
+	jQuery("aside[class~='Photographer']").find( "li.menu-item-45" ).addClass("active");
+
 });
-
-
