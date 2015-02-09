@@ -37,7 +37,10 @@ get_header(); ?>
 															'taxonomy' => 'photography-type',
 															'field'    => 'slug',
 															'terms'    => $term->slug
-														))
+														)),
+										'orderby'  => 'menu_order',
+										
+										'order'    => 'DSC'
 									);
 				$loop = new WP_Query( $args );
         
@@ -46,14 +49,14 @@ get_header(); ?>
 				$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 				?>
             
-            <article <?php post_class("small-12 medium-6 large-4 left columns") ?> id="post-<?php the_ID(); ?>">
+            <article <?php post_class("small-12 medium-6 large-4 left ") ?> id="post-<?php the_ID(); ?>">
                 
                 <?php do_action('foundationPress_page_before_entry_content'); ?>
                 
                 <div class="entry-content">
                     
-                    <a class="entry-link" href="<?php echo $large_image_url[0]; ?>" rel="lightbox" >
-                    	<span class="entypo-search" ></span>
+                    <a class="entry-link lightbox-link" href="<?php echo $large_image_url[0]; ?>" rel="lightbox" >
+                    	<span class="entypo-resize-full" ></span>
                     	<h6 class="entry-title"><?php the_title(); ?></h6>
                     	<?php echo $thb_url?>
                     </a>

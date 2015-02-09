@@ -16,9 +16,7 @@ get_header(); ?>
 						
 						
 						
-						 <header>
-							 <h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>
-						 </header>
+						 
 						
 						<div class="entry-content">
 						
@@ -28,6 +26,10 @@ get_header(); ?>
 								?>
 							</div>
 						</div>
+						
+						<footer>
+							 <h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>
+						 </footer>
 						
 						<hr>
 						

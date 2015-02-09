@@ -808,7 +808,7 @@ $list-font-size: rem-calc(14);
 
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
+$tabbar-bg: $primary-color;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
@@ -827,13 +827,13 @@ $list-font-size: rem-calc(14);
 
 // Off Canvas Menu Variables
 // $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
+$off-canvas-bg: $tabbar-bg;
 // $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 
 // Off Canvas Menu List Variables
 // $off-canvas-label-padding: 0.3rem rem-calc(15);
 // $off-canvas-label-color: $aluminum;
-// $off-canvas-label-text-transform: uppercase;
+$off-canvas-label-text-transform: uppercase;
 // $off-canvas-label-font-size: rem-calc(12);
 // $off-canvas-label-font-weight: $font-weight-bold;
 // $off-canvas-label-bg: $tuatara;
@@ -1389,12 +1389,12 @@ $topbar-title-font-size: rem-calc(56);
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: black;
+$topbar-link-color:  lighten(black, 30%);
 $topbar-link-color-hover: $primary-color;
-$topbar-link-color-active: black;
-$topbar-link-color-active-hover: black;
+$topbar-link-color-active: $topbar-link-color;
+$topbar-link-color-active-hover: $topbar-link-color;
 // $topbar-link-weight: $font-weight-normal;
-$topbar-link-font-size: rem-calc(18);
+$topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-color-hover: white;
@@ -1403,7 +1403,7 @@ $topbar-link-bg-active: white;
 $topbar-link-bg-active-hover: white;
 // $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: uppercase;
-$topbar-link-padding: ($topbar-height / 6);
+$topbar-link-padding: ($topbar-height / 12);
 // $topbar-back-link-size: $h5-font-size;
 // $topbar-link-dropdown-padding: 20px;
 

@@ -34,7 +34,8 @@ get_header(); ?>
 															'key' => 'wpcf-project-type',
 															'value' => $project_type,
 															'compare' => '='
-														))
+														)),
+										
 									);
 				$loop = new WP_Query( $args );
 					
@@ -67,9 +68,19 @@ get_header(); ?>
         <?php 	$args = array( 
 										'post_type' => 'project',
 										'posts_per_page' => -1, 
-										'meta_key'   => 'wpcf-project-type', 
-										/* 1 for director */
-										'meta_value' => $project_type
+								
+										'meta_query'     => array(
+									        array(
+									            'key'       => 'wpcf-project-type',
+									            'value'     => $project_type,
+									            'compare'   => '='
+									        )
+									    ),
+										
+										
+										'orderby'  => 'menu_order',
+										
+										'order'    => 'DSC'
 									);
 				$loop = new WP_Query( $args );
         
