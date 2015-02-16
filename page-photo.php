@@ -24,7 +24,7 @@ get_header(); ?>
         		
         		/* START TAXONOMY LOOP */
         		
-        		echo '<section id="'.$term->name.'" class="row"><h1 class="taxonomy-title"><span>//</span>';	
+        		echo '<section id="'.$term->name.'" class="row photography-taxonomy"><h1 class="taxonomy-title"><span>//</span>';	
 				echo $term->name;
 				echo '</h1>';	
         		
