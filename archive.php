@@ -2,7 +2,7 @@
 <div class="row">
 <!-- Row for main content area -->
 	<!-- <?php get_sidebar(); ?> -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 large-12 columns" role="main">
 
 	<?php if ( have_posts() ) : ?>
 

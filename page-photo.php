@@ -45,7 +45,14 @@ get_header(); ?>
 				$loop = new WP_Query( $args );
         
 				while ( $loop->have_posts() ) : $loop->the_post(); 
-				$thb_url = wp_get_attachment_image( get_post_thumbnail_id($post->ID),'video-thumb',0,array('class'=>'entry-thumbnail','rel'=>'lightbox'));
+				if(wp_is_mobile()){
+					$thb_size='video-thumbxl';
+				}
+				else {
+					$thb_size='video-thumb';
+				}
+				$thb_url = wp_get_attachment_image( get_post_thumbnail_id($post->ID),$thb_size,0,array('class'=>'entry-thumbnail','rel'=>'lightbox'));
+				
 				$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 				?>
             

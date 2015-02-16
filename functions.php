@@ -34,6 +34,7 @@ require_once('library/custom-header.php');
 
 
 add_image_size( 'video-thumb', 220, 120, array( 'center', 'center' ) ); // (cropped)
+add_image_size( 'video-thumbxl', 440, 240, array( 'center', 'center' ) ); // (cropped)
 set_post_thumbnail_size( 220, 120, array( 'center', 'center' ) );
 
 ?>
