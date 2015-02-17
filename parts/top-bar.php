@@ -6,12 +6,12 @@
             </li>
             
 			<li >
-				<a  href="http://ashkoek-photography.tumblr.com/">
+				<a  href="http://instagram.com/ashkoek">
 					<span class="entypo-instagrem social" ></span>
 				</a>
 			</li>
 			<li >
-				<a  href="http://ashkoek-photography.tumblr.com/">
+				<a  href="http://vimeo.com/ashkoek">
 					<span class="entypo-vimeo-circled social" ></span>
 				</a>
 			</li>

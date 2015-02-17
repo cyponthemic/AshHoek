@@ -49,7 +49,7 @@ get_header(); ?>
 					$thb_size='video-thumbxl';
 				}
 				else {
-					$thb_size='video-thumb';
+					$thb_size='thumbnail';
 				}
 				$thb_url = wp_get_attachment_image( get_post_thumbnail_id($post->ID),$thb_size,0,array('class'=>'entry-thumbnail','rel'=>'lightbox'));
 				
@@ -61,9 +61,10 @@ get_header(); ?>
                 <?php do_action('foundationPress_page_before_entry_content'); ?>
                 
                 <div class="entry-content">
-                    
+                    <?php edit_post_link( $link, $before, $after, $id ); ?>
                     <a class="entry-link lightbox-link" href="<?php echo $large_image_url[0]; ?>" rel="lightbox" >
-                    	<span class="entypo-resize-full" ></span>
+                    	<span class="entypo-resize-full" > 
+                    	</span>
                     	<h6 class="entry-title"><?php the_title(); ?></h6>
                     	<?php echo $thb_url?>
                     </a>

@@ -29,6 +29,7 @@ get_header(); ?>
 						
 						<footer>
 							 <h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>
+							 <?php edit_post_link( $link, $before, $after, $id ); ?>
 						 </footer>
 						
 						<hr>
@@ -49,7 +50,7 @@ get_header(); ?>
 				$loop = new WP_Query( $args );
         
 				while ( $loop->have_posts() ) : $loop->the_post(); 
-				$thb_url = wp_get_attachment_image( get_post_thumbnail_id($post->ID),'video-thumb',0,array('class'=>'entry-thumbnail'));
+				$thb_url = wp_get_attachment_image( get_post_thumbnail_id($post->ID),'thumbnail',0,array('class'=>'entry-thumbnail'));
 				?>
             
             <article <?php post_class("small-12 medium-6 large-4 left columns") ?> id="post-<?php the_ID(); ?>">
