@@ -304,15 +304,17 @@ position: relative;
 			font-weight: bold;
 			
 		}
-	}
+		
+	  }
+	  #menu-portfolio{
 	 .active{
 	 		background-color: $primary-color;
 	 		
 	 		&:before{
 	 			display: none;
 	 			}
-	 		a {
-		 		color: white !important;
+	 		&>a {
+		 		color: white ;
 	 		}
 		}
 		.sub-menu {
@@ -322,9 +324,20 @@ position: relative;
 			li {
 				background-color: white;
 				margin: 0;
+				
 			}
-		}
-		
+		}}
+	  .menu-item-has-children {
+		  background-color: white;
+		  a{ color:lighten($topbar-link-color,40%);
+			  
+		  }
+		  .sub-menu{
+			  a{
+				  color:lighten($topbar-link-color,40%);
+			  }
+		  }
+	  }
 	}
 
 	@media #{$medium-only} {

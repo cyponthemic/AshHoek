@@ -46,7 +46,7 @@ get_header(); ?>
         
 				while ( $loop->have_posts() ) : $loop->the_post(); 
 				if(wp_is_mobile()){
-					$thb_size='video-thumbxl';
+					$thb_size='thumbnail';
 				}
 				else {
 					$thb_size='thumbnail';

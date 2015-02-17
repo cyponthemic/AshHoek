@@ -10,10 +10,7 @@ jQuery(document).ready(function($) {
 	jQuery("aside[class~='Cinematographer']").find( "li.menu-item-46" ).addClass("active");
 	jQuery("aside[class~='Photographer']").find( "li.menu-item-45" ).addClass("active");
 
-	jQuery("iframe").find( ".title" ).hide();
-
-	jQuery("iframe").attr('portrait', '0');
-
+	
 
 });
 
