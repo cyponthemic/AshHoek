@@ -51,7 +51,7 @@ get_header(); ?>
 						
 							<div class="entry-video flex-video widescreen vimeo">
 								<?php /* Output the video */
-								echo types_render_field( "project-video-embed", array("width" => "100%","height" => "100%","portrait" => "0") );
+								echo types_render_field( "project-video-embed", array("width" => "100%","height" => "100%",'show_name' => 'false') );
 								?>
 							</div>
 							<h1 class="entry-title"><span>//</span><?php the_title(); ?></h1>
